@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>探寻百年伟业宏图，青年接力绘锦绣</title>
+<style>
+	.ban{
+		width:500px;
+		height:auto;
+		border:1px solid black;
+	}
+	 #send {
+		 width:40px;
+		 height:25px;
+		 font-size: 12px;
+		 text-align: center;
+		 line-height: 25px;
+		 background: paleturquoise;
+	 }
+ </style>
+<link rel="stylesheet" type="text/css" href="css/styles.css" />
+<script type="text/javascript" src="jquery.js"></script>
+	<script src="jquery.timelinr-0.9.4.js" type="text/javascript"></script>
+	<script type="text/javascript"> 
+		$(function(){
+			$().timelinr({
+				autoPlay: 'true',
+				autoPlayDirection: 'forward',
+				startAt: 1
+			})
+		});
+	</script>
+</head>
+<body id="introduction">
+<div id="page" style="min-height:min-content">
+<div class="demotips"><a href="main.html">横屏</a><a href="map.html">地图</a><a href="phone.html">竖屏</a></div>
+	<div id="container" style="padding-bottom: 0px;" class="content clearfix">
+	<div id="timeline">
+		<ul id="dates">
+			<li><a href="#20世纪60年代" style="font-size:25px">20世纪60年代</a></li>
+			<li><a href="#1954年4月22日-28日" style="font-size:25px;">1954年4月22日-28日</a></li>
+			<li><a href="#1958年" style="font-size:25px;">1958年</a></li>
+			<li><a href="#1958年3月9日-26日" style="font-size: 25px;">1958年3月9日-26日</a></li>
+			<li><a href="#1964年9月" style="font-size: 25px;">1964年9月</a></li>
+			<li><a href="#1966年底" style="font-size: 25px;">1966年底</a></li>
+			<li><a href="#1971年" style="font-size: 25px;">1971年</a></li>
+			<li><a href="#1978年以后" style="font-size: 25px;">1978年以后</a></li>
+			<li><a href="#2015年" style="font-size: 25px;">2015年</a></li>
+		</ul>
+		<ul id="issues">
+			<li id="20世纪60年代">
+				<img src="images/1.jpeg" width="406" height="228" />
+				<h1>20世纪60年代</h1>
+				<p>为满足备战需要，改变我国经济发展战略布局，国家启动“三线建设”，在中西部地区的13个省、自治区进行了一场大规模的国防、科技、工业和交通基础设施建设。</p>
+			</li>
+			<li id="1954年4月22日-28日">
+				<img src="images/2.png" width="256" height="256" />
+				<h1>1954年4月22日-28日</h1>
+				<p>地质部在北京召开了全国第一次地质勘察工作会议。会后，地质部对攀西地区进行地质普查。</p>
+			</li>
+			<li id="1958年">
+				<img src="images/3.jpeg" width="256" height="256" />
+				<h1>1958年</h1>
+				<p>地质部向国家正式提交了《攀枝花钒钛磁铁矿计算报告书》，其中提到查明的“工业储量”为10亿吨。</p>
+			</li>
+			<li id="1958年3月9日-26日">
+				<img src="images/4.jpeg" width="800" height="533" />
+				<h1>1958年3月9日-26日</h1>
+				<p>中央工作会议在成都召开。毛主席批准了冶金部建设西昌钢铁厂的设想，攀枝花的开发由此提上了国家建设的日程。</p>
+			</li>
+			<li id="1964年9月">
+				<img src="images/5.png" width="256" height="256" />
+				<h1>1964年9月</h1>
+				<p>交通施工队伍和建工部云南建筑总公司组建的工地先后进入攀枝花。</p>
+			</li>
+			<li id="1966年底">
+				<img src="images/6.jpeg" width="630" height="418" />
+				<h1>1966年底</h1>
+				<p>攀枝花水陆交通运输网基本建成。</p>
+			</li>
+			<li id="1971年">
+				<img src="images/7.png" width="256" height="256" />
+				<h1>1971年</h1>
+				<p>施工队伍达79116人，为一期工程施工期间人数最多的一年。</p>
+			</li>
+			<li id="1978年以后">
+				<img src="images/8.png" width="256" height="256" />
+				<h1>1978年以后</h1>
+				<p>部分全民所有制施工企业成建制调往外地，集体所有制建筑业迅速发展。</p>
+			</li>
+			<li id="2015年">
+				<img src="images/9.jpeg" width="1024" height="682" />
+				<h1>2015年</h1>
+				<p>攀枝花在建市50周年之际建成了建筑面积2.4万平方米的三线建设博物馆，攀枝花中国三线建设博物馆已成为国内展陈面积最大、馆藏资源最全、社会影响最广泛的三线建设主题博物馆。</p>
+			</li>
+		</ul>
+		<div id="grad_left"></div>
+		<div id="grad_right"></div>
+	</div>
+  </div> 
+</div> 
+</div>
+
+<p>以下为留言板功能</p>
+<p>名字:</p><br/> <input type="text" id="mood"/><br/>
+<p>笔记:</p><br/> <textarea id="network"></textarea><br/>
+<button id="send">发表</button>
+<div class="ban"></div>
+<script>
+var mood=document.getElementById ("mood");
+var network=document.getElementById ("network");
+var send=document.getElementById ("send");
+var ban=document.querySelector (".ban");
+//localStorage.clear ();
+readdata();
+send.onclick =function(){
+  var time=new Date();
+  var shuju={
+        mymood:mood.value,
+        mynetwork:network .value,
+        now_time:time.toLocaleString()  //2019/7/2 下午7:42:15
+    };
+    // console.log(JSON.stringify (shuju));
+     localStorage.setItem (time.getTime(),JSON.stringify (shuju));
+    mood.value="";
+    network.value ="";
+
+    // alert("发表成功");
+     readdata();
+}
+function readdata(){
+    ban.innerHTML ="";
+    var length=localStorage.length-1;
+    for(var i=length;i>=0;i--){
+      var k=localStorage.key(i);  //获取key值
+      var data=JSON.parse (localStorage.getItem(k));  //
+        console.log(k);
+        ban.innerHTML +=data.mymood +" &nbsp;&nbsp;&nbsp;"+data.mynetwork +" &nbsp;&nbsp;&nbsp;"+ data.now_time +"<br/>";
+    }
+}
+</script>
+</body>
+</html>

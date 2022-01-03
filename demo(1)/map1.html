@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>map1</title>
+<style>
+</style>
+<link rel="stylesheet" type="text/css" href="css/styles_map.css" />
+<script type="text/javascript" src="jquery.js"></script>
+	<script src="jquery.timelinr-0.9.4.js" type="text/javascript"></script>
+	<script type="text/javascript"> 
+		$(function(){
+			$().timelinr()
+		});
+	</script>
+</head>
+
+<body id="introduction">
+<div id="page">
+
+	<div id="container" class="content clearfix">
+	<img src="images/bwg.jpg">
+	<p>攀枝花中国三线建设博物馆，隶属于攀枝花市文化电视和旅游出版局，位于四川省攀枝花市花城新区干坝塘村，是中国面积最大、展陈最全的三线主题博物馆，全面展示了全国13个省区三线建设的历史面貌。</p>
+	<div id="timeline">
+		<ul id="dates">
+			<li><a href="#2010年初">2010年初</a></li>
+			<li><a href="#2014年2月">2014年2月</a></li>
+			<li><a href="#2014年9月">2014年9月</a></li>
+			<li><a href="#2015年1月">2015年1月</a></li>
+			<li><a href="#2015年2月">2015年2月</a></li>
+			<li><a href="#2015年">2015年</a></li>
+			<li><a href="#2016年4月11日">2016年4月11日</a></li>
+			<li><a href="#2018年">2018年</a></li>
+			<li><a href="#2021年10月9日">2021年10月9日</a></li>
+		</ul>
+		<ul id="issues">
+			<li id="2010年初">
+				<img src="images/bwg/01.jpg" width="256" height="256" />
+				<h1>2010年初<h1>
+				<p>博物馆开建</p>
+			</li>
+			<li id="2014年2月">
+				<img src="images/bwg/02.jpg" width="256" height="256" />
+				<h1>2014年2月</h1>
+				<p>“三线建设博物馆”主体工程动工</p>
+			</li>
+			<li id="2014年9月">
+				<img src="images/bwg/03.jpg" width="800" height="533" />
+				<h1>2014年9月</h1>
+				<p>四川攀枝花三线建设博物馆主体工程基本完成，随即进入设备安装、二次装修和展陈施工交叉作业</p>
+			</li>
+			<li id="2015年1月">
+				<img src="images/bwg/04.jpeg" width="256" height="256" />
+				<h1>2015年1月</h1>
+				<p>原中共中央政治局常委宋平同志为博物馆题写馆名——“中国三线建设博物馆”</p>
+			</li>
+			<li id="2015年2月">
+				<img src="images/bwg/05.jpeg" width="256" height="256" />
+				<h1>2015年2月</h1>
+				<p>四川攀枝花三线建设博物馆展陈施工完成</p>
+			</li>
+			<li id="2015年">
+				<img src="images/bwg/06.jpeg" width="256" height="256" />
+				<h1>2015年</h1>
+				<p>博物馆正式对外免费开放，项目总投资共计3.4亿元</p>
+			</li>
+			<li id="2016年4月11日">
+				<img src="images/bwg/07.jpeg" width="256" height="256" />
+				<h1>2016年4月11日</h1>
+				<p>四川攀枝花三线建设博物馆改名为“攀枝花中国三线建设博物馆”</p>
+			</li>
+			<li id="2018年">
+				<img src="images/bwg/08.jpeg" width="256" height="256" />
+				<h1>2018年</h1>
+				<p>博物馆接待游客总量达40万人</p>
+			</li>
+			<li id="2021年10月9日">
+				<img src="images/bwg/09.jpeg" width="256" height="256" />
+				<h1>2021年10月9日</h1>
+				<p>攀枝花中国三线建设博物馆晋升为全国爱国主义教育示范基地授牌仪式在攀枝花中国三线建设博物馆举行</p>
+			</li>
+		</ul>
+		<div id="grad_left"></div>
+		<div id="grad_right"></div>
+        <a href="#" id="next">+</a>
+		<a href="#" id="prev">-</a>
+	</div>
+  </div>
+ </div> 
+</div>
+<div class="demotips"><a href="main.html">横屏</a><a href="map.html">地图</a><a href="phone.html">竖屏</a></div>
+
+<p>以下为留言板功能</p>
+<p>名字:</p><br/> <input type="text" id="mood"/><br/>
+<p>笔记:</p><br/> <textarea id="network"></textarea><br/>
+<button id="send">发表</button>
+<div class="ban"></div>
+<script>
+var mood=document.getElementById ("mood");
+var network=document.getElementById ("network");
+var send=document.getElementById ("send");
+var ban=document.querySelector (".ban");
+//localStorage.clear ();
+readdata();
+send.onclick =function(){
+  var time=new Date();
+  var shuju={
+        mymood:mood.value,
+        mynetwork:network .value,
+        now_time:time.toLocaleString()   //获取当前时间
+    };
+    // console.log(JSON.stringify (shuju));
+     localStorage.setItem (time.getTime(),JSON.stringify (shuju));  
+    mood.value="";
+    network.value ="";  
+
+    // alert("发表成功");
+     readdata();
+}
+function readdata(){
+    ban.innerHTML ="";
+    var length=localStorage.length-1;
+    for(var i=length;i>=0;i--){
+      var k=localStorage.key(i);  //获取key值
+      var data=JSON.parse (localStorage.getItem(k));  //获取value值
+        console.log(k);
+        ban.innerHTML +=data.mymood +" &nbsp;&nbsp;&nbsp;"+data.mynetwork +" &nbsp;&nbsp;&nbsp;"+ data.now_time +"<br/>";
+    }
+}
+
+</script>
+</body>
+</html>
