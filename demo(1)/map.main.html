@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script>
+		function fun1(){
+			window.location.href="map1.html";
+		}
+		function fun2(){
+			window.location.href="map2.html";
+		}
+		function fun3(){
+			window.location.href="map3.html";
+		}
+		function fun4(){
+			window.location.href="map4.html";
+		}
+	</script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>探寻百年伟业宏图，青年接力绘锦绣</title>
 <style>
+	.btn1{
+		width:100px;
+		height:0px;
+		color: red;
+		font-size: 20px;
+		background-color:#FFF; ;
+		position: absolute;
+		margin-left:937px;
+		margin-top:-170px;
+	}
+
 </style>
 <body>
     <div id="container" class="content clearfix">
 		<div class="container">
-			<img src="images/map.png" alt="攀枝花市地图" width="50%"/>
+				<img src="images/map.png" alt="攀枝花市地图"/>
         </div>
-			<button class="btn1" onclick="fun1()">▶</button>
+			<button class="btn1" onclick="fun1()">三线建设博物馆
+				<img src="images/btn.png" alt="攀枝花市地图" width="40%"/>
+			</button>
+			<button class="btn2" onclick="fun2()">▶</button>
+			<button class="btn3" onclick="fun3()">▶</button>
+			<button class="btn4" onclick="fun4()">▶</button>
 		</div>
 <link rel="stylesheet" type="text/css" href="css/styles.main.css" />
 </body>
